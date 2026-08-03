@@ -6,4 +6,4 @@ paymentmethod as payment_method,
 status,
 amount/100 as amount
 
-    from dbt-tutorial.stripe.payment
+from {{ source('stripe', 'payment') }}
